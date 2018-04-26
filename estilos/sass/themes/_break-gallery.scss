@@ -1,0 +1,27 @@
+@import '../partials/_variables';
+@import '../partials/_queries';
+@import '../mixins/_paddings';
+
+.break{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: $gutter-primary $gutter-grid;
+}
+.break__item{
+	width: 45px;
+	height: 45px;
+	margin-right: $gutter-d;
+	border-radius: 50%;
+	font-size: $title-3;
+	background-color: #ccc;
+	&:last-child{
+		margin-right: 0;
+		background-color: darken(#ccc, 7);
+	}
+	@include querie(mobile){
+		width: 35px;
+		height: 35px;
+	}
+}

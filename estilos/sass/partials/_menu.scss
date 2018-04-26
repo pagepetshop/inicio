@@ -1,0 +1,95 @@
+@import 'variables';
+
+.menu__container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 55px;
+	padding: $gutter;
+	transition: 1s;
+	
+}
+.js-is-visible--background{
+	background-color: darken(dodgerblue, 7);
+	box-shadow: 1px -1px 10px #333;
+	transition: 1s;
+}
+.menu__logo{
+	font-family: 'Grand Hotel';
+	font-size: $header-2;
+	font-weight: bold;
+	color: $white-2;
+	text-decoration: none;
+	z-index: 200;
+}
+.menu__icon{
+	display: none;
+}
+
+.menu__item{
+	display: inline-block;
+	margin-right: 1.2em;
+	text-align: center;
+	list-style-type: none;
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.menu__link{
+	color: $white-2;
+	text-decoration: none;
+	&:hover{
+		border-bottom: 1px solid $white-2;
+	}
+	
+}
+
+//Responsive
+@media screen and (max-width: 850px){
+	.menu__icon{
+		display: block;
+		z-index: 200;
+	}
+	#js-icon{
+		border: none;
+		background-color: transparent;
+		outline: none;
+		color: $white-2;
+	}
+	.menu-container__items{
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 0;
+		height: 100vh;
+		background-color: dodgerblue;
+		transition: .4s;
+	}
+	.menu__ul{
+		margin-top: 100px;
+		padding: 0 30px;
+	}
+	.menu__item{
+		display: block;
+		padding: 10px 0;
+		margin: 0;
+	}
+
+	//Esta es la clase equivalente a .menu-contenedor__items cuando se produce el touch
+	.js-menu--visible{
+		width: 100%;
+		left: 0;
+		transition: .5s;
+	}
+}
+@media screen and (max-width: 550px){
+	.menu__logo{
+		font-size: $header-3;
+	}
+}

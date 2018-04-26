@@ -1,0 +1,23 @@
+@import '_variables';
+
+.footer{
+	position: relative;
+	width: 100%;
+	padding: 1em;
+	background-color: $bg-footer;
+}
+.footer__author{
+	font-size: 1em;
+	color: $text-footer;
+	@media screen and(max-width: 650px){
+		font-size: .9em;
+	}
+}
+.footer__link{
+	text-decoration: none;
+	color: rgba(#ccc, .70);
+	&:hover{
+		border-bottom: 1px solid #ccc;
+		color: rgba(#ccc, .90);
+	}
+}

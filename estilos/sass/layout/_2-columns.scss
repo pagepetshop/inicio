@@ -1,0 +1,15 @@
+@import '../partials/_variables';
+@import '../partials/_queries';
+@import '../mixins/_paddings';
+
+.two-columns{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	//height: 350px;
+	//background-image: linear-gradient(left, $blue-life 20%, $blue-normal 70%);
+	@include querie(tablet){
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+	}
+}

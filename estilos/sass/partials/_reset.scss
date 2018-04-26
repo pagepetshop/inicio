@@ -1,0 +1,26 @@
+@import 'variables';
+*{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+p{
+    color: $text-color;
+}
+
+@font-face{ 
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../../fuente/lobster/Lobster-Regular.ttf') format('truetype');
+}
+@font-face{ 
+    font-family: 'Grand Hotel';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../../fuente/grand-hotel/GrandHotel-Regular.ttf') format('truetype');
+}
+body{
+	font-family: 'Lato';
+	background-color: $white-2;
+}

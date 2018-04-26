@@ -1,0 +1,30 @@
+@import '../partials/_variables';
+@import '../partials/_queries';
+
+.gallery__item{
+	background-color: #f7f7f7;
+}
+.gallery__image{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: $gutter-r;
+}
+.content__title{
+	margin-bottom: $gutter-d;
+	font-weight: 700;
+	font-size: $title-2;
+	color: $text-color;
+}
+.content__paragraph{
+	font-size: $title-3;
+}
+.content__title, .content__paragraph{
+	text-align: center;
+}

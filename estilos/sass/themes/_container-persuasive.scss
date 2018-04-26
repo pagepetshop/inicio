@@ -1,0 +1,59 @@
+@import '../partials/_variables';
+@import '../partials/_queries';
+@import '../mixins/_paddings';
+
+.container-persuasive{
+	position: relative;
+	justify-items: center;
+	align-items: center;
+	grid-gap: $gutter-d;
+	height: 500px;
+	padding: 0 $gutter-grid;
+	background-image: url(../../../imagenes/cachorro.jpg);
+	background-size: cover;
+	background-position: center;
+	clip-path: polygon(0 1%, 100% 10%, 100% 100%, 0 100%);
+	&:before{
+		content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        width: 100%;
+        height: 100%;
+        clip-path: inherit;
+        background-color: rgba($secundario, .90);
+	}
+	@include querie(tablet){
+		padding-top: 150px;
+		height: auto;
+	}
+}
+
+.persuasive__title{
+	font-size: $header-1;
+	font-family: 'Lobster';
+	margin-bottom: $gutter-d;
+}
+.persuasive__paragraph{
+	width: 300px;
+	font-size: $title-2;
+	@include querie(mobile){
+		width: auto;
+	}
+	&:last-child{
+		margin-top: $gutter-d;
+	}
+}
+.persuasive__title, .persuasive__paragraph{
+	color: $white-2;
+}
+//.button-call--blue{
+	//background-color: $blue-life;
+	//&:hover{
+		//background-color: darken($blue-life, 7);
+	//}
+//}
+.persuasive__icon{
+	color: #ffebf0;
+}

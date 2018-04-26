@@ -1,0 +1,26 @@
+@import '../partials/_reset';
+@import '../partials/_menu';
+@import '../partials/_banner';
+
+//Estos estilos funcionan como especie de modificador para la sección "Galería"
+//lo hago aquí para no crear otro nuevo archivo, por el momento.
+.container-banner{
+	background-image: url(../../../imagenes/cachorro.jpg);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+	&:before{
+		background-color: rgba($secundario, .90);
+	}
+}
+.banner__image{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 2px solid #f188a4;
+}
+
+@import '../layout/_layout-gallery-history';
+@import '../themes/_content-gallery-history';
+
+@import '../themes/_break-gallery';
+@import '../partials/_footer';
+

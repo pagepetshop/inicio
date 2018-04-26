@@ -1,0 +1,20 @@
+@import '../partials/_variables';
+@import '../partials/_queries';
+@import '../mixins/_paddings';
+
+.gallery{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	padding: 0 $gutter-grid;
+	@media screen and (max-width: 650px){
+		grid-template-columns: 1fr;
+	}
+}
+
+.gallery__item--four{
+	grid-column: 2/3;
+	@media screen and (max-width: 650px){
+		grid-column: auto;
+	}
+}

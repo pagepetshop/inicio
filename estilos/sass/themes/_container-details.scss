@@ -1,0 +1,51 @@
+@import '../partials/_variables';
+@import '../partials/_queries';
+@import '../mixins/_paddings';
+
+.container-details{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	grid-gap: $gutter-grid;
+	justify-items: center;
+	margin-bottom: $gutter-primary;
+	padding: 0 $gutter-grid;
+	@include querie(tablet){
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, 1fr);
+	}
+	@supports not (display: grid){
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		@include querie(tablet){
+			justify-content: center;
+		}
+	}
+}
+.details__item{
+	margin-bottom: $gutter-d;
+}
+.details__title{
+	color: $text-color;
+	text-align: center;
+	font-family: 'Lobster';
+	font-size: $header-3;
+}
+.details__paragraph{
+	width: 250px;
+	font-size: $title-2;
+	text-align: center;
+	@include querie(tablet){
+		width: auto;
+	}
+}
+.container-icon-details{
+	display: flex;
+	justify-content: center;
+	margin: $gutter-grid;
+}
+.icon--details{
+	color: $blue-life;
+}
